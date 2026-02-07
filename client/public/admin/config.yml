@@ -1,0 +1,385 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "client/public/assets/images"
+public_folder: "/assets/images"
+
+locale: 'pt'
+
+collections:
+  - name: "content"
+    label: "Configurações do Site"
+    files:
+      - file: "client/src/content.json"
+        label: "Configuração Completa"
+        name: "home"
+        fields:
+          # ============================================
+          # CONFIGURAÇÕES GERAIS
+          # ============================================
+          - label: "⚙️ Configurações Gerais"
+            name: "config"
+            widget: "object"
+            collapsed: false
+            fields:
+              - label: "🎨 Tema Base"
+                name: "tema"
+                widget: "select"
+                options: ["light", "dark"]
+                default: "light"
+                hint: "Escolha entre tema claro ou escuro"
+              
+              - label: "🎨 Cor Primária"
+                name: "corPrimaria"
+                widget: "color"
+                default: "#6B8E7F"
+                hint: "Cor principal do site (botões, destaques)"
+              
+              - label: "🎨 Cor Secundária"
+                name: "corSecundaria"
+                widget: "color"
+                default: "#8FA89E"
+                hint: "Cor secundária para variações"
+              
+              - label: "🎨 Cor de Acento"
+                name: "corAcento"
+                widget: "color"
+                default: "#C77B58"
+                hint: "Cor de destaque (elementos especiais)"
+              
+              - label: "🎨 Cor de Fundo"
+                name: "corFundo"
+                widget: "color"
+                default: "#FAF8F3"
+                hint: "Cor de fundo principal do site"
+              
+              - label: "🎨 Cor de Fundo Secundária"
+                name: "corFundoSecundaria"
+                widget: "color"
+                default: "#F5F5F5"
+                hint: "Cor de fundo para seções alternadas"
+              
+              - label: "🎨 Cor do Texto"
+                name: "corTexto"
+                widget: "color"
+                default: "#2D2D2D"
+                hint: "Cor principal do texto"
+              
+              - label: "🎨 Cor do Texto Secundário"
+                name: "corTextoSecundario"
+                widget: "color"
+                default: "#6B7280"
+                hint: "Cor para textos menos importantes"
+              
+              - label: "📐 Arredondamento de Bordas"
+                name: "raioBorda"
+                widget: "select"
+                options: 
+                  - {label: "Sem arredondamento", value: "0"}
+                  - {label: "Pequeno (0.5rem)", value: "0.5rem"}
+                  - {label: "Médio (1rem)", value: "1rem"}
+                  - {label: "Grande (1.5rem)", value: "1.5rem"}
+                  - {label: "Muito Grande (2rem)", value: "2rem"}
+                default: "1rem"
+              
+              - label: "✍️ Fonte de Títulos"
+                name: "fonteTitulo"
+                widget: "select"
+                options:
+                  - "Playfair Display"
+                  - "Montserrat"
+                  - "Poppins"
+                  - "Roboto"
+                  - "Open Sans"
+                  - "Lato"
+                  - "Raleway"
+                  - "Oswald"
+                  - "Merriweather"
+                  - "Ubuntu"
+                default: "Playfair Display"
+              
+              - label: "✍️ Fonte do Corpo"
+                name: "fonteCorpo"
+                widget: "select"
+                options:
+                  - "Inter"
+                  - "Roboto"
+                  - "Open Sans"
+                  - "Lato"
+                  - "Poppins"
+                  - "Montserrat"
+                  - "Nunito"
+                  - "Source Sans Pro"
+                  - "PT Sans"
+                  - "Ubuntu"
+                default: "Inter"
+              
+              - label: "📏 Largura Máxima do Conteúdo"
+                name: "larguraMaxima"
+                widget: "select"
+                options:
+                  - {label: "Estreita (1024px)", value: "1024px"}
+                  - {label: "Média (1280px)", value: "1280px"}
+                  - {label: "Larga (1536px)", value: "1536px"}
+                  - {label: "Extra Larga (1920px)", value: "1920px"}
+                default: "1280px"
+
+          # ============================================
+          # SEO E METADADOS
+          # ============================================
+          - label: "🔍 SEO e Metadados"
+            name: "seo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título da Página", name: "titulo", widget: "string", required: true, hint: "Aparece na aba do navegador e resultados de busca"}
+              - {label: "Descrição", name: "descricao", widget: "text", required: true, hint: "Descrição que aparece nos resultados de busca (150-160 caracteres)"}
+              - {label: "Palavras-chave", name: "palavrasChave", widget: "string", required: false, hint: "Separadas por vírgula"}
+              - {label: "Imagem Social (Open Graph)", name: "imagemSocial", widget: "image", required: false, hint: "Imagem que aparece ao compartilhar no WhatsApp, Facebook, etc"}
+              - {label: "Autor", name: "autor", widget: "string", required: false}
+
+          # ============================================
+          # CONTROLE DE SEÇÕES
+          # ============================================
+          - label: "🎛️ Controle de Seções"
+            name: "secoesAtivas"
+            widget: "object"
+            collapsed: true
+            hint: "Ative ou desative seções da página"
+            fields:
+              - {label: "✅ Exibir Hero (Banner Principal)", name: "hero", widget: "boolean", default: true}
+              - {label: "✅ Exibir Serviços", name: "servicos", widget: "boolean", default: true}
+              - {label: "✅ Exibir Sobre", name: "sobre", widget: "boolean", default: true}
+              - {label: "✅ Exibir Depoimentos", name: "depoimentos", widget: "boolean", default: true}
+              - {label: "✅ Exibir Galeria", name: "galeria", widget: "boolean", default: false}
+              - {label: "✅ Exibir FAQ", name: "faq", widget: "boolean", default: false}
+              - {label: "✅ Exibir Horários", name: "horarios", widget: "boolean", default: false}
+              - {label: "✅ Exibir Localização", name: "localizacao", widget: "boolean", default: false}
+              - {label: "✅ Exibir Contato", name: "contato", widget: "boolean", default: true}
+
+          # ============================================
+          # INFORMAÇÕES DA EMPRESA
+          # ============================================
+          - label: "🏢 Informações da Empresa"
+            name: "empresaInfo"
+            widget: "object"
+            collapsed: false
+            fields:
+              - {label: "Nome da Empresa", name: "nome", widget: "string", required: true}
+              - {label: "Slogan", name: "slogan", widget: "string", required: true}
+              - {label: "Descrição Curta", name: "descricao", widget: "text", required: true}
+              - {label: "Logo", name: "logo", widget: "image", required: false, hint: "Logo da empresa (opcional)"}
+              - {label: "Telefone", name: "telefone", widget: "string", required: true}
+              - {label: "WhatsApp (DDI + DDD + Número)", name: "whatsapp", widget: "string", required: true, hint: "Ex: 5511999999999"}
+              - {label: "E-mail", name: "email", widget: "string", required: true}
+              - {label: "Endereço Completo", name: "endereco", widget: "string", required: true}
+              - {label: "Cidade", name: "cidade", widget: "string", required: false}
+              - {label: "Estado (UF)", name: "estado", widget: "string", required: false}
+              - {label: "CEP", name: "cep", widget: "string", required: false}
+              - {label: "Horário de Funcionamento", name: "horario", widget: "string", required: false}
+              - {label: "Instagram (Usuário)", name: "instagram", widget: "string", required: false, hint: "@usuario"}
+              - {label: "Facebook (Slug)", name: "facebook", widget: "string", required: false}
+              - {label: "LinkedIn (URL)", name: "linkedin", widget: "string", required: false}
+              - {label: "YouTube (URL)", name: "youtube", widget: "string", required: false}
+
+          # ============================================
+          # SEÇÃO HERO (BANNER PRINCIPAL)
+          # ============================================
+          - label: "🎯 Seção Hero (Banner Principal)"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título Principal", name: "titulo", widget: "string"}
+              - {label: "Subtítulo", name: "subtitulo", widget: "text"}
+              - {label: "Texto do Botão", name: "botaoTexto", widget: "string"}
+              - {label: "Ação do Botão", name: "botaoAcao", widget: "select", options: ["whatsapp", "scroll-servicos", "scroll-contato"], default: "whatsapp"}
+              - {label: "Imagem de Fundo", name: "imagem", widget: "image"}
+              - {label: "Overlay Escuro (0-100)", name: "overlayOpacity", widget: "number", min: 0, max: 100, default: 60, hint: "Intensidade da camada escura sobre a imagem"}
+              - label: "Estilo do Hero"
+                name: "estilo"
+                widget: "select"
+                options:
+                  - {label: "Imagem de Fundo", value: "background"}
+                  - {label: "Imagem Lateral", value: "split"}
+                  - {label: "Centralizado", value: "centered"}
+                default: "background"
+
+          # ============================================
+          # SEÇÃO SERVIÇOS
+          # ============================================
+          - label: "💼 Serviços"
+            name: "servicos"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título da Seção", name: "tituloSecao", widget: "string", default: "Nossos Serviços"}
+              - {label: "Subtítulo da Seção", name: "subtituloSecao", widget: "text", required: false}
+              - label: "Layout dos Serviços"
+                name: "layout"
+                widget: "select"
+                options:
+                  - {label: "Grade (Grid)", value: "grid"}
+                  - {label: "Carrossel", value: "carousel"}
+                  - {label: "Lista", value: "list"}
+                default: "grid"
+              - label: "Lista de Serviços"
+                name: "lista"
+                widget: "list"
+                summary: '{{fields.titulo}}'
+                fields:
+                  - {label: "Título do Serviço", name: "titulo", widget: "string"}
+                  - {label: "Descrição", name: "descricao", widget: "text"}
+                  - {label: "Ícone (Emoji ou Lucide Icon)", name: "icone", widget: "string", hint: "Use um emoji ou nome de ícone do Lucide"}
+                  - {label: "Imagem (opcional)", name: "imagem", widget: "image", required: false}
+
+          # ============================================
+          # SEÇÃO SOBRE
+          # ============================================
+          - label: "ℹ️ Seção Sobre"
+            name: "sobre"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Texto", name: "texto", widget: "markdown"}
+              - {label: "Imagem Lateral", name: "imagem", widget: "image"}
+              - label: "Posição da Imagem"
+                name: "imagemPosicao"
+                widget: "select"
+                options: ["esquerda", "direita"]
+                default: "direita"
+              - label: "Diferenciais"
+                name: "diferenciais"
+                widget: "list"
+                summary: '{{fields.titulo}}'
+                fields:
+                  - {label: "Título", name: "titulo", widget: "string"}
+                  - {label: "Ícone", name: "icone", widget: "string"}
+                  - {label: "Descrição (opcional)", name: "descricao", widget: "string", required: false}
+
+          # ============================================
+          # SEÇÃO DEPOIMENTOS
+          # ============================================
+          - label: "💬 Depoimentos"
+            name: "depoimentos"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título da Seção", name: "tituloSecao", widget: "string", default: "O que dizem nossos clientes"}
+              - {label: "Subtítulo da Seção", name: "subtituloSecao", widget: "text", required: false}
+              - label: "Layout dos Depoimentos"
+                name: "layout"
+                widget: "select"
+                options:
+                  - {label: "Grade", value: "grid"}
+                  - {label: "Carrossel", value: "carousel"}
+                default: "grid"
+              - label: "Lista de Depoimentos"
+                name: "lista"
+                widget: "list"
+                summary: '{{fields.nome}}'
+                fields:
+                  - {label: "Nome do Cliente", name: "nome", widget: "string"}
+                  - {label: "Cargo/Empresa (opcional)", name: "cargo", widget: "string", required: false}
+                  - {label: "Depoimento", name: "texto", widget: "text"}
+                  - {label: "Avaliação (1-5)", name: "avaliacao", widget: "number", min: 1, max: 5}
+                  - {label: "Foto (opcional)", name: "foto", widget: "image", required: false}
+
+          # ============================================
+          # SEÇÃO GALERIA
+          # ============================================
+          - label: "🖼️ Galeria de Fotos"
+            name: "galeria"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título da Seção", name: "tituloSecao", widget: "string", default: "Galeria"}
+              - {label: "Subtítulo da Seção", name: "subtituloSecao", widget: "text", required: false}
+              - label: "Layout da Galeria"
+                name: "layout"
+                widget: "select"
+                options:
+                  - {label: "Grade Masonry", value: "masonry"}
+                  - {label: "Grade Uniforme", value: "grid"}
+                  - {label: "Carrossel", value: "carousel"}
+                default: "grid"
+              - label: "Imagens"
+                name: "imagens"
+                widget: "list"
+                summary: '{{fields.titulo}}'
+                fields:
+                  - {label: "Imagem", name: "imagem", widget: "image"}
+                  - {label: "Título (opcional)", name: "titulo", widget: "string", required: false}
+                  - {label: "Descrição (opcional)", name: "descricao", widget: "string", required: false}
+
+          # ============================================
+          # SEÇÃO FAQ
+          # ============================================
+          - label: "❓ FAQ (Perguntas Frequentes)"
+            name: "faq"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título da Seção", name: "tituloSecao", widget: "string", default: "Perguntas Frequentes"}
+              - {label: "Subtítulo da Seção", name: "subtituloSecao", widget: "text", required: false}
+              - label: "Perguntas e Respostas"
+                name: "perguntas"
+                widget: "list"
+                summary: '{{fields.pergunta}}'
+                fields:
+                  - {label: "Pergunta", name: "pergunta", widget: "string"}
+                  - {label: "Resposta", name: "resposta", widget: "text"}
+
+          # ============================================
+          # SEÇÃO HORÁRIOS
+          # ============================================
+          - label: "🕐 Horários de Funcionamento"
+            name: "horarios"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título da Seção", name: "tituloSecao", widget: "string", default: "Horários de Funcionamento"}
+              - label: "Dias da Semana"
+                name: "dias"
+                widget: "list"
+                fields:
+                  - {label: "Dia", name: "dia", widget: "string", hint: "Ex: Segunda a Sexta"}
+                  - {label: "Horário", name: "horario", widget: "string", hint: "Ex: 8h às 18h"}
+                  - {label: "Fechado", name: "fechado", widget: "boolean", default: false}
+
+          # ============================================
+          # SEÇÃO LOCALIZAÇÃO
+          # ============================================
+          - label: "📍 Localização"
+            name: "localizacao"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título da Seção", name: "tituloSecao", widget: "string", default: "Nossa Localização"}
+              - {label: "Subtítulo da Seção", name: "subtituloSecao", widget: "text", required: false}
+              - {label: "Link do Google Maps", name: "googleMapsUrl", widget: "string", required: false, hint: "URL do iframe do Google Maps"}
+              - {label: "Latitude", name: "latitude", widget: "string", required: false}
+              - {label: "Longitude", name: "longitude", widget: "string", required: false}
+
+          # ============================================
+          # SEÇÃO CONTATO
+          # ============================================
+          - label: "📞 Seção Contato"
+            name: "contato"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Título", name: "titulo", widget: "string"}
+              - {label: "Subtítulo", name: "subtitulo", widget: "string"}
+              - {label: "Texto do Botão WhatsApp", name: "botaoTexto", widget: "string", default: "Iniciar Conversa no WhatsApp"}
+              - label: "Estilo da Seção"
+                name: "estilo"
+                widget: "select"
+                options:
+                  - {label: "Fundo Colorido", value: "colored"}
+                  - {label: "Fundo Claro", value: "light"}
+                  - {label: "Fundo com Imagem", value: "image"}
+                default: "colored"
+              - {label: "Imagem de Fundo (se estilo = image)", name: "imagemFundo", widget: "image", required: false}

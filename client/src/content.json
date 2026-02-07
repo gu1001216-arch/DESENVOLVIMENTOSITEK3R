@@ -1,0 +1,200 @@
+{
+  "config": {
+    "corFundo": "#FFFFFF",
+    "tema": "light",
+    "corFundoSecundaria": "#F9FAFB",
+    "corSecundaria": "#00aaff",
+    "corAcento": "#ffcc00",
+    "raioBorda": "0.5rem",
+    "corTextoSecundario": "#6B7280",
+    "fonteTitulo": "Montserrat",
+    "fonteCorpo": "Inter",
+    "larguraMaxima": "1280px",
+    "corPrimaria": "#0056b3",
+    "corTexto": "#111827"
+  },
+  "contato": {
+    "titulo": "Solicite seu Orçamento",
+    "subtitulo": "Fale agora com o técnico Kassio pelo WhatsApp e garanta o melhor serviço de climatização.",
+    "botaoTexto": "Chamar no WhatsApp",
+    "estilo": "colored",
+    "imagemFundo": "/images/k3r_hero.webp"
+  },
+  "depoimentos": {
+    "tituloSecao": "O que nossos clientes dizem",
+    "subtituloSecao": "A satisfação de quem já confiou no trabalho da K3R.",
+    "layout": "grid",
+    "lista": [
+      {
+        "nome": "liliane rodrigues",
+        "cargo": "Local Guide",
+        "texto": "Muito educado, prestativo, serviço de qualidade, preço justo, garantia dos serviços prestados, o que é muito importante e gera muita credibilidade com o cliente. Gostei dos serviços e super indico. Excelente profissional.",
+        "avaliacao": 5,
+        "foto": ""
+      },
+      {
+        "nome": "Holdrin Milet",
+        "cargo": "Cliente",
+        "texto": "Excelente atendimento! O técnico Kassio instalou o ar condicionado com muito profissionalismo e atenção aos detalhes. Teve muito cuidado com o acabamento.",
+        "avaliacao": 5,
+        "foto": ""
+      },
+      {
+        "nome": "Eliseu Lopes",
+        "cargo": "Cliente",
+        "texto": "Serviço de qualidade e ótimo atendimento. Foi necessário adaptar a saída de água por erro na instalação feita anteriormente e ele prontamente resolveu.",
+        "avaliacao": 5,
+        "foto": ""
+      }
+    ]
+  },
+  "localizacao": {
+    "tituloSecao": "Onde Estamos",
+    "subtituloSecao": "Localizados em Palhoça, atendemos toda a região.",
+    "googleMapsUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.697582340371!2d-48.7143231!3d-27.6493884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527351e5489102d%3A0xd090405cb084a196!2sK3R%20CLIMATIZA%C3%87%C3%83O%20-%20Instala%C3%A7%C3%B5es%20e%20Manuten%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr",
+    "latitude": "-27.6493884",
+    "longitude": "-48.7143231"
+  },
+  "horarios": {
+    "tituloSecao": "Horários de Atendimento",
+    "dias": [
+      {
+        "dia": "Segunda a Sexta",
+        "horario": "08:00 às 17:30",
+        "fechado": false
+      },
+      {
+        "dia": "Sábado",
+        "horario": "08:00 às 17:00",
+        "fechado": false
+      },
+      {
+        "dia": "Domingo",
+        "horario": "Fechado",
+        "fechado": true
+      }
+    ]
+  },
+  "servicos": {
+    "tituloSecao": "Nossos Serviços",
+    "subtituloSecao": "Soluções completas para garantir a qualidade do ar e o seu conforto.",
+    "layout": "grid",
+    "lista": [
+      {
+        "titulo": "Instalação Profissional",
+        "descricao": "Instalação de splits e sistemas inverter seguindo rigorosamente as normas para manter sua garantia.",
+        "icone": "❄️",
+        "imagem": "/assets/images/1.png"
+      },
+      {
+        "titulo": "Manutenção e Higienização",
+        "descricao": "Limpeza completa e higienização para garantir a saúde da sua família e a vida útil do seu aparelho.",
+        "icone": "🛠️",
+        "imagem": "/assets/images/2.png"
+      },
+      {
+        "titulo": "Reparos Técnicos",
+        "descricao": "Correção de vazamentos, drenos e problemas elétricos com rapidez e eficiência.",
+        "icone": "🔧",
+        "imagem": "/assets/images/3.png"
+      }
+    ]
+  },
+  "faq": {
+    "tituloSecao": "Dúvidas Frequentes",
+    "subtituloSecao": "Informações importantes para você cuidar do seu ar-condicionado.",
+    "perguntas": [
+      {
+        "pergunta": "Qual a frequência ideal para manutenção?",
+        "resposta": "Recomendamos a limpeza dos filtros mensalmente e uma higienização profissional completa a cada 6 meses para garantir a saúde e eficiência do aparelho."
+      },
+      {
+        "pergunta": "Vocês dão garantia do serviço?",
+        "resposta": "Sim! Todos os nossos serviços de instalação e manutenção possuem garantia, proporcionando total tranquilidade para nossos clientes."
+      },
+      {
+        "pergunta": "Atendem quais regiões?",
+        "resposta": "Atendemos toda a cidade de Palhoça e região metropolitana de Florianópolis."
+      }
+    ]
+  },
+  "galeria": {
+    "tituloSecao": "Nossos Trabalhos",
+    "subtituloSecao": "Confira alguns projetos realizados pela nossa equipe.",
+    "layout": "grid",
+    "imagens": []
+  },
+  "empresaInfo": {
+    "horario": "Segunda a Sexta: 8:00 às 17:30 | Sábado: 8:00 às 17:00",
+    "youtube": "",
+    "cidade": "Palhoça",
+    "estado": "SC",
+    "facebook": "",
+    "descricao": "Especialistas em soluções completas de climatização, desde a instalação de sistemas modernos até a manutenção preventiva e corretiva, liderados pelo técnico Kassio.",
+    "endereco": "R. São Caetano, 68 - Bela Vista",
+    "telefone": "(48) 99606-0236",
+    "logo": "/images/k3r_logo_full.webp",
+    "cep": "88132-787",
+    "whatsapp": "5548996060236",
+    "instagram": "",
+    "nome": "K3R CLIMATIZAÇÃO",
+    "email": "contato@k3rclimatizacao.com.br",
+    "linkedin": "",
+    "slogan": "Instalações e Manutenção com Excelência"
+  },
+  "sobre": {
+    "titulo": "Sobre a K3R CLIMATIZAÇÃO",
+    "texto": "A K3R CLIMATIZAÇÃO é referência em Palhoça e região quando o assunto é ar-condicionado. Liderada pelo técnico Kassio, nossa empresa se destaca pelo profissionalismo, atenção aos detalhes e compromisso com a satisfação do cliente.\n\nTrabalhamos com as principais marcas do mercado, como LG Dual Inverter, garantindo instalações limpas e seguras. Nosso foco é oferecer um serviço de alta qualidade com um preço justo e garantia total dos serviços prestados.\n\nSeja para sua residência ou comércio, a K3R está pronta para entregar o melhor conforto térmico para você e sua família.",
+    "imagem": "/assets/images/captura-de-tela-2026-02-07-000437.png",
+    "imagemPosicao": "direita",
+    "diferenciais": [
+      {
+        "titulo": "Técnico Especialista",
+        "icone": "👨‍🔧",
+        "descricao": "Kassio Queiroz"
+      },
+      {
+        "titulo": "Garantia de Serviço",
+        "icone": "🛡️",
+        "descricao": "Total segurança"
+      },
+      {
+        "titulo": "Atendimento Nota 10",
+        "icone": "🚀",
+        "descricao": "Avaliação 5/5"
+      },
+      {
+        "titulo": "Preço Justo",
+        "icone": "💰",
+        "descricao": "Melhor custo-benefício"
+      }
+    ]
+  },
+  "hero": {
+    "titulo": "Conforto Térmico com Qualidade e Confiança",
+    "subtitulo": "Instalação e manutenção de ar-condicionado com garantia e o melhor atendimento de Palhoça e região.",
+    "botaoTexto": "Solicitar Orçamento no WhatsApp",
+    "botaoAcao": "whatsapp",
+    "imagem": "/assets/images/whatsapp-image-2026-02-07-at-14.09.14-1-.jpeg",
+    "overlayOpacity": 38,
+    "estilo": "centered"
+  },
+  "seo": {
+    "titulo": "K3R CLIMATIZAÇÃO - Instalações e Manutenção em Palhoça",
+    "descricao": "Especialistas em instalação e manutenção de ar-condicionado em Palhoça e região. Qualidade, preço justo e garantia com o técnico Kassio.",
+    "palavrasChave": "ar condicionado, instalação, manutenção, climatização, hvac, limpeza de ar, Palhoça, K3R Climatização",
+    "imagemSocial": "/images/k3r_hero.webp",
+    "autor": "K3R Climatização"
+  },
+  "secoesAtivas": {
+    "contato": true,
+    "depoimentos": true,
+    "localizacao": true,
+    "horarios": true,
+    "servicos": true,
+    "faq": true,
+    "galeria": true,
+    "sobre": true,
+    "hero": true
+  }
+}
