@@ -72,10 +72,9 @@ export default function Home() {
       <header className="bg-card/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between" style={{ maxWidth: 'var(--max-width)' }}>
           <div className="flex items-center gap-3">
-            {empresaInfo.logo && (
-              <img src={empresaInfo.logo} alt={empresaInfo.nome} className="h-10 w-auto object-contain" />
-            )}
-
+            <h1 className="text-lg md:text-2xl font-bold text-primary break-words max-w-[280px] sm:max-w-none leading-tight" style={{ fontFamily: `var(--font-heading-family), sans-serif` }}>
+              {empresaInfo.nome}
+            </h1>
           </div>
 
           {/* Menu Desktop */}
