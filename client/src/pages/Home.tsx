@@ -179,7 +179,7 @@ export default function Home() {
                 </div>
                 <div className={sobre.imagemPosicao === 'esquerda' ? 'order-2 lg:order-1' : 'order-1 lg:order-2'}>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 break-words" style={{ fontFamily: `var(--font-heading-family), sans-serif` }}>{sobre.titulo}</h2>
-                  <div className="prose prose-sm md:prose-lg max-w-none text-muted-foreground mb-8 md:mb-10 whitespace-pre-line text-sm md:text-base break-words">
+                  <div className="prose prose-sm md:prose-lg max-w-none text-muted-foreground mb-8 md:mb-10 whitespace-pre-line text-sm md:text-base break-words text-justify">
                     {sobre.texto}
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
