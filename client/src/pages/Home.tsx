@@ -75,9 +75,7 @@ export default function Home() {
             {empresaInfo.logo && (
               <img src={empresaInfo.logo} alt={empresaInfo.nome} className="h-10 w-auto object-contain" />
             )}
-            <h1 className="text-lg md:text-2xl font-bold text-primary break-words max-w-[280px] sm:max-w-none leading-tight" style={{ fontFamily: `var(--font-heading-family), sans-serif` }}>
-              {empresaInfo.nome}
-            </h1>
+
           </div>
 
           {/* Menu Desktop */}
@@ -126,30 +124,13 @@ export default function Home() {
       <main className="flex-grow">
         {/* SEÇÃO HERO */}
         {secoesAtivas.hero && (
-          <section id="inicio" className="relative overflow-hidden bg-black flex items-center justify-center w-full min-h-[400px] md:min-h-[600px]">
+          <section id="inicio" className="relative overflow-hidden bg-black flex items-center justify-center w-full">
             <img 
               src={hero.imagem} 
               alt={hero.titulo}
-              className="w-full h-auto min-h-[400px] md:min-h-[600px] object-contain block" 
+              className="w-full h-auto object-contain block" 
             />
-            <div className="absolute inset-0 bg-black" style={{ opacity: hero.overlayOpacity / 100 }} />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="container mx-auto text-center text-white px-4 py-12 md:py-20" style={{ maxWidth: 'var(--max-width)' }}>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700 break-words px-2" style={{ fontFamily: `var(--font-heading-family), sans-serif` }}>
-                {hero.titulo}
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 md:mb-10 max-w-3xl mx-auto opacity-90 animate-in fade-in slide-in-from-bottom-12 duration-1000 break-words px-2">
-                {hero.subtitulo}
-              </p>
-              <Button 
-                size="lg" 
-                className="rounded-full px-8 md:px-10 py-6 md:py-7 text-base md:text-lg shadow-xl hover:scale-105 transition-transform"
-                onClick={() => handleButtonAction(hero.botaoAcao)}
-              >
-                {hero.botaoTexto}
-              </Button>
-            </div>
-          </div>
+
         </section>
         )}
 
