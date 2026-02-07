@@ -82,7 +82,7 @@
     "lista": [
       {
         "titulo": "Instalação Profissional",
-        "descricao": "Instalação de splits e sistemas inverter seguindo rigorosamente as normas para manter sua garantia.",
+        "descricao": "Instalação padrão que segue rigorosamente as exigências do fabricante e com a garantia.",
         "icone": "❄️",
         "imagem": "/assets/images/1.png"
       },
@@ -94,7 +94,7 @@
       },
       {
         "titulo": "Reparos Técnicos",
-        "descricao": "Correção de vazamentos, drenos e problemas elétricos com rapidez e eficiência.",
+        "descricao": "Correção de vazamentos, carga de fluído refrigerante, drenos e problemas elétricos com rapidez e eficiência.",
         "icone": "🔧",
         "imagem": "/assets/images/3.png"
       }
@@ -144,7 +144,7 @@
   },
   "sobre": {
     "titulo": "Sobre a K3R CLIMATIZAÇÃO",
-    "texto": "A K3R CLIMATIZAÇÃO é referência em Palhoça e região quando o assunto é ar-condicionado. Liderada pelo técnico Kassio, nossa empresa se destaca pelo profissionalismo, atenção aos detalhes e compromisso com a satisfação do cliente.\n\nTrabalhamos com as principais marcas do mercado, como LG Dual Inverter, garantindo instalações limpas e seguras. Nosso foco é oferecer um serviço de alta qualidade com um preço justo e garantia total dos serviços prestados.\n\nSeja para sua residência ou comércio, a K3R está pronta para entregar o melhor conforto térmico para você e sua família.",
+    "texto": "A K3R CLIMATIZAÇÃO é referência em Palhoça e região quando o assunto é ar-condicionado. Liderada pelo técnico Kassio Queiroz, nossa empresa se destaca pelo profissionalismo, atenção aos detalhes e compromisso com a satisfação do cliente. Trabalhamos com as principais marcas do mercado. Nosso foco é oferecer um serviço de qualidade, preço justo e garantia dos serviços prestados. Seja para sua residência ou comércio, a K3R está pronta para entregar o melhor conforto térmico para você e sua família.",
     "imagem": "/assets/images/captura-de-tela-2026-02-07-000437.png",
     "imagemPosicao": "direita",
     "diferenciais": [
