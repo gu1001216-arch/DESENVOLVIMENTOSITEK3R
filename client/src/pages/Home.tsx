@@ -126,13 +126,15 @@ export default function Home() {
       <main className="flex-grow">
         {/* SEÇÃO HERO */}
         {secoesAtivas.hero && (
-          <section id="inicio" className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
-            <div 
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105" 
-              style={{ backgroundImage: `url(${hero.imagem})` }}
+          <section id="inicio" className="relative overflow-hidden bg-black flex items-center justify-center w-full min-h-[400px] md:min-h-[600px]">
+            <img 
+              src={hero.imagem} 
+              alt={hero.titulo}
+              className="w-full h-auto min-h-[400px] md:min-h-[600px] object-contain block" 
             />
             <div className="absolute inset-0 bg-black" style={{ opacity: hero.overlayOpacity / 100 }} />
-            <div className="container mx-auto relative z-10 text-center text-white px-4 py-12 md:py-20" style={{ maxWidth: 'var(--max-width)' }}>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="container mx-auto text-center text-white px-4 py-12 md:py-20" style={{ maxWidth: 'var(--max-width)' }}>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700 break-words px-2" style={{ fontFamily: `var(--font-heading-family), sans-serif` }}>
                 {hero.titulo}
               </h2>
@@ -147,7 +149,8 @@ export default function Home() {
                 {hero.botaoTexto}
               </Button>
             </div>
-          </section>
+          </div>
+        </section>
         )}
 
         {/* SEÇÃO SERVIÇOS */}
@@ -165,7 +168,7 @@ export default function Home() {
                     <CardContent className="pt-8 md:pt-10 pb-6 md:pb-8 px-6 md:px-8 text-center flex flex-col h-full">
                       {s.imagem ? (
                         <div className="w-full h-40 md:h-48 mb-6 rounded-xl overflow-hidden">
-                          <img src={s.imagem} alt={s.titulo} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                          <img src={s.imagem} alt={s.titulo} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300" />
                         </div>
                       ) : (
                         <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
@@ -263,7 +266,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {galeria.imagens.map((img: any, i: number) => (
                   <div key={i} className="group relative overflow-hidden rounded-xl shadow-lg aspect-square">
-                    <img src={img.imagem} alt={img.titulo || `Imagem ${i + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <img src={img.imagem} alt={img.titulo || `Imagem ${i + 1}`} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300" />
                     {(img.titulo || img.descricao) && (
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 md:p-6">
                         {img.titulo && <h3 className="text-white font-bold text-base md:text-lg mb-1 break-words">{img.titulo}</h3>}
@@ -366,7 +369,11 @@ export default function Home() {
           >
             {contato.estilo === 'image' && contato.imagemFundo && (
               <>
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${contato.imagemFundo})` }} />
+                <img 
+                  src={contato.imagemFundo} 
+                  alt="" 
+                  className="absolute inset-0 w-full h-full object-contain" 
+                />
                 <div className="absolute inset-0 bg-black/70" />
               </>
             )}
